@@ -1,6 +1,0 @@
-org\example\operation\impl\RightJoinOperation.class
-org\example\operation\JoinOperation.class
-org\example\data\DataRow.class
-org\example\data\JoinedDataRow.class
-org\example\operation\impl\InnerJoinOperation.class
-org\example\operation\impl\LeftJoinOperation.class
