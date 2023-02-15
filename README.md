@@ -11,5 +11,3 @@ Join Operation interface that provide three implementations:
 - JDK 17
 - Maven 4.0.0
 - Junit 4.13.1
-# inner-join
-# inner-join

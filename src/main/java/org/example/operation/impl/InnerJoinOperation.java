@@ -2,7 +2,6 @@ package org.example.operation.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 import org.example.data.DataRow;
 import org.example.data.JoinedDataRow;
@@ -19,10 +18,7 @@ public class InnerJoinOperation implements JoinOperation<
             Collection<DataRow<Integer, String>> rightCollection
     ) {
         Collection<JoinedDataRow<Integer, String, String>> result = new ArrayList<>();
-        Map<Integer, String> map = new HashMap<>(leftCollection.size());
-        for (DataRow<Integer, String> left : leftCollection) {
-            map.put(left.getKey(), left.getValue());
-        }
+        Map<Integer, String> map = JoinOperation.createMap(leftCollection);
         for (DataRow<Integer, String> right : rightCollection) {
             if (map.containsKey(right.getKey())) {
                 Integer key = right.getKey();
